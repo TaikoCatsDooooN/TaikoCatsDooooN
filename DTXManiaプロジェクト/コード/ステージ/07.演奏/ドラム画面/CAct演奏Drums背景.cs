@@ -446,7 +446,7 @@ namespace DTXMania
                     if (CDTXMania.Tx.Background_Down_Clear_4th != null)
                     {
                         CDTXMania.Tx.Background_Down_Clear_4th.n透明度 = ((this.ct上背景FIFOタイマー.n現在の値 * 0xff) / 100);
-                        CDTXMania.Tx.Background_Down_Clear_4th.t2D描画(CDTXMania.app.Device, 0, 360);
+                        CDTXMania.Tx.Background_Down_Clear_4th.t2D描画(CDTXMania.app.Device, 0, 361);
                     }
                 }
             }
