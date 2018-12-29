@@ -13,7 +13,7 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>Mint2270.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>miyaneko1467.pfx</AssemblyOriginatorKeyFile>
     <ApplicationIcon>
     </ApplicationIcon>
     <FileUpgradeFlags>
@@ -50,6 +50,9 @@
     <LangVersion>7.3</LangVersion>
     <DebugType>pdbonly</DebugType>
     <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bass.Net">
@@ -169,6 +172,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Mint2270.snk" />
+    <None Include="miyaneko1467.pfx" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
