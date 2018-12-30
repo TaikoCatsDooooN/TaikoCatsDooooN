@@ -1,5 +1,5 @@
 # TaikoCatsDooooN
-DTXManiaをいじってtja再生プログラムにしちゃった[TJAPlayer2fPC](https://github.com/kairera0467/TJAP2fPC)をForkして本家風に改造した[TJAPlayer3]をForkして超本家風にしたアレ。
+DTXManiaをいじってtja再生プログラムにしちゃった[TJAPlayer2fPC](https://github.com/kairera0467/TJAP2fPC)をForkして本家風に改造した[TJAPlayer3](https://aioilight.space/taiko/tjap3/)をForkして超本家風にしたアレ。
 
 開発グループ名は、「!TaikoCatsDooooN!」です。実装してほしいものがあればgithubのissuesまで。
 
@@ -18,6 +18,7 @@ DTXManiaをいじってtja再生プログラムにしちゃった[TJAPlayer2fPC]
 - [ ] 段位認定（段位チャレンジ）
 - [ ] 段位認定時の難易度選択画面
 - [ ] Config.ini設定項目の追加
+- [ ] 解析画像の除去(あるのかはわかりません)
 
 ## ロードマップみたいな
 
