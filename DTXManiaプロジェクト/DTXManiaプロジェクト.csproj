@@ -14,7 +14,7 @@
     <FileAlignment>512</FileAlignment>
     <ApplicationIcon>TaikoCatsDooooN.ico</ApplicationIcon>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <SignAssembly>false</SignAssembly>
+    <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>
     </AssemblyOriginatorKeyFile>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
@@ -66,6 +66,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>TJAPlayer3.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bass.Net">
@@ -287,13 +290,8 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>move /y "$(TargetDir)FDK.dll" "$(SolutionDir)Test\dll\"
-move /y "$(TargetDir)FDK.pdb" "$(SolutionDir)Test\dll\"
-move /y "$(TargetDir)Bass.Net.dll" "$(SolutionDir)Test\dll\"
-move /y "$(TargetDir)DirectShowLib-2005.dll" "$(SolutionDir)Test\dll\"
-move /y "$(TargetDir)SlimDX.dll" "$(SolutionDir)Test\dll\"
-move /y "$(TargetDir)CSharpTest.Net.Collections.*" "$(SolutionDir)Test\dll\"
-copy /y "$(SolutionDir)Readme.txt" "$(SolutionDir)Test\"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <Import Project="packages\SharpDX.2.6.3\build\SharpDX.targets" Condition="Exists('packages\SharpDX.2.6.3\build\SharpDX.targets')" />
 </Project>

@@ -1,0 +1,225 @@
+<LSMASHWorksIndexVersion=0.0.2.0>
+<LibavReaderIndexFile=13>
+<InputFilePath>C:\Users\kazu\Downloads\TJAPlayer3-Ver.1.1.3\System\A-Style\Sounds\dong.ogg</InputFilePath>
+<LibavReaderIndex=0x00002300,0,ogg>
+<ActiveVideoStreamIndex>-0000000001</ActiveVideoStreamIndex>
+<ActiveAudioStreamIndex>+0000000000</ActiveAudioStreamIndex>
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=4087,PTS=-128,DTS=-128,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=128
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=4087,PTS=0,DTS=0,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=128
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=4087,PTS=128,DTS=128,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=128
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=4087,PTS=256,DTS=256,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=128
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=4087,PTS=384,DTS=384,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=128
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=4087,PTS=512,DTS=512,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=128
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=4087,PTS=640,DTS=640,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=128
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=4087,PTS=768,DTS=768,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=128
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=4087,PTS=896,DTS=896,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=128
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=4087,PTS=1024,DTS=1024,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=128
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=4087,PTS=1152,DTS=1152,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=128
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=4087,PTS=1280,DTS=1280,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=128
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=4087,PTS=1408,DTS=1408,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=128
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=4087,PTS=1536,DTS=1536,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=128
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=4087,PTS=1664,DTS=1664,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=128
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=4087,PTS=1792,DTS=1792,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=128
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=4087,PTS=1920,DTS=1920,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=128
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=4087,PTS=2048,DTS=2048,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=128
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=4087,PTS=2176,DTS=2176,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=128
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=4087,PTS=2304,DTS=2304,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=128
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=4087,PTS=2432,DTS=2432,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=576
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=4087,PTS=3008,DTS=3008,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=4087,PTS=4032,DTS=4032,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=8411,PTS=5056,DTS=5056,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=8411,PTS=6080,DTS=6080,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=8411,PTS=7104,DTS=7104,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=8411,PTS=8128,DTS=8128,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=8411,PTS=9152,DTS=9152,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=8411,PTS=10176,DTS=10176,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=8411,PTS=11200,DTS=11200,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=8411,PTS=12224,DTS=12224,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=8411,PTS=13248,DTS=13248,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=13043,PTS=14272,DTS=14272,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=13043,PTS=15296,DTS=15296,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=13043,PTS=16320,DTS=16320,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=13043,PTS=17344,DTS=17344,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=13043,PTS=18368,DTS=18368,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=13043,PTS=19392,DTS=19392,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=13043,PTS=20416,DTS=20416,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=13043,PTS=21440,DTS=21440,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=17375,PTS=22464,DTS=22464,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=17375,PTS=23488,DTS=23488,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=17375,PTS=24512,DTS=24512,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=17375,PTS=25536,DTS=25536,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=17375,PTS=26560,DTS=26560,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=17375,PTS=27584,DTS=27584,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=17375,PTS=28608,DTS=28608,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=17375,PTS=29632,DTS=29632,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=22125,PTS=30656,DTS=30656,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=22125,PTS=31680,DTS=31680,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=22125,PTS=32704,DTS=32704,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=22125,PTS=33728,DTS=33728,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=22125,PTS=34752,DTS=34752,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=22125,PTS=35776,DTS=35776,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=22125,PTS=36800,DTS=36800,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=26549,PTS=37824,DTS=37824,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=26549,PTS=38848,DTS=38848,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=26549,PTS=39872,DTS=39872,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=26549,PTS=40896,DTS=40896,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=26549,PTS=41920,DTS=41920,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=26549,PTS=42944,DTS=42944,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=26549,PTS=43968,DTS=43968,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=26549,PTS=44992,DTS=44992,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=26549,PTS=46016,DTS=46016,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+Index=0,Type=1,Codec=86021,TimeBase=1/48000,POS=26549,PTS=47040,DTS=47040,EDI=0
+Channels=2:0x3,Rate=48000,Format=fltp,BPS=32,Length=1024
+</LibavReaderIndex>
+<StreamDuration=0,1>47888</StreamDuration>
+<StreamIndexEntries=0,1,65>
+POS=4087,TS=-128,Flags=1,Size=0,Distance=0
+POS=4087,TS=0,Flags=1,Size=0,Distance=0
+POS=4087,TS=128,Flags=1,Size=0,Distance=0
+POS=4087,TS=256,Flags=1,Size=0,Distance=0
+POS=4087,TS=384,Flags=1,Size=0,Distance=0
+POS=4087,TS=512,Flags=1,Size=0,Distance=0
+POS=4087,TS=640,Flags=1,Size=0,Distance=0
+POS=4087,TS=768,Flags=1,Size=0,Distance=0
+POS=4087,TS=896,Flags=1,Size=0,Distance=0
+POS=4087,TS=1024,Flags=1,Size=0,Distance=0
+POS=4087,TS=1152,Flags=1,Size=0,Distance=0
+POS=4087,TS=1280,Flags=1,Size=0,Distance=0
+POS=4087,TS=1408,Flags=1,Size=0,Distance=0
+POS=4087,TS=1536,Flags=1,Size=0,Distance=0
+POS=4087,TS=1664,Flags=1,Size=0,Distance=0
+POS=4087,TS=1792,Flags=1,Size=0,Distance=0
+POS=4087,TS=1920,Flags=1,Size=0,Distance=0
+POS=4087,TS=2048,Flags=1,Size=0,Distance=0
+POS=4087,TS=2176,Flags=1,Size=0,Distance=0
+POS=4087,TS=2304,Flags=1,Size=0,Distance=0
+POS=4087,TS=2432,Flags=1,Size=0,Distance=0
+POS=4087,TS=3008,Flags=1,Size=0,Distance=0
+POS=4087,TS=4032,Flags=1,Size=0,Distance=0
+POS=8411,TS=5056,Flags=1,Size=0,Distance=0
+POS=8411,TS=6080,Flags=1,Size=0,Distance=0
+POS=8411,TS=7104,Flags=1,Size=0,Distance=0
+POS=8411,TS=8128,Flags=1,Size=0,Distance=0
+POS=8411,TS=9152,Flags=1,Size=0,Distance=0
+POS=8411,TS=10176,Flags=1,Size=0,Distance=0
+POS=8411,TS=11200,Flags=1,Size=0,Distance=0
+POS=8411,TS=12224,Flags=1,Size=0,Distance=0
+POS=8411,TS=13248,Flags=1,Size=0,Distance=0
+POS=13043,TS=14272,Flags=1,Size=0,Distance=0
+POS=13043,TS=15296,Flags=1,Size=0,Distance=0
+POS=13043,TS=16320,Flags=1,Size=0,Distance=0
+POS=13043,TS=17344,Flags=1,Size=0,Distance=0
+POS=13043,TS=18368,Flags=1,Size=0,Distance=0
+POS=13043,TS=19392,Flags=1,Size=0,Distance=0
+POS=13043,TS=20416,Flags=1,Size=0,Distance=0
+POS=13043,TS=21440,Flags=1,Size=0,Distance=0
+POS=17375,TS=22464,Flags=1,Size=0,Distance=0
+POS=17375,TS=23488,Flags=1,Size=0,Distance=0
+POS=17375,TS=24512,Flags=1,Size=0,Distance=0
+POS=17375,TS=25536,Flags=1,Size=0,Distance=0
+POS=17375,TS=26560,Flags=1,Size=0,Distance=0
+POS=17375,TS=27584,Flags=1,Size=0,Distance=0
+POS=17375,TS=28608,Flags=1,Size=0,Distance=0
+POS=17375,TS=29632,Flags=1,Size=0,Distance=0
+POS=22125,TS=30656,Flags=1,Size=0,Distance=0
+POS=22125,TS=31680,Flags=1,Size=0,Distance=0
+POS=22125,TS=32704,Flags=1,Size=0,Distance=0
+POS=22125,TS=33728,Flags=1,Size=0,Distance=0
+POS=22125,TS=34752,Flags=1,Size=0,Distance=0
+POS=22125,TS=35776,Flags=1,Size=0,Distance=0
+POS=22125,TS=36800,Flags=1,Size=0,Distance=0
+POS=26549,TS=37824,Flags=1,Size=0,Distance=0
+POS=26549,TS=38848,Flags=1,Size=0,Distance=0
+POS=26549,TS=39872,Flags=1,Size=0,Distance=0
+POS=26549,TS=40896,Flags=1,Size=0,Distance=0
+POS=26549,TS=41920,Flags=1,Size=0,Distance=0
+POS=26549,TS=42944,Flags=1,Size=0,Distance=0
+POS=26549,TS=43968,Flags=1,Size=0,Distance=0
+POS=26549,TS=44992,Flags=1,Size=0,Distance=0
+POS=26549,TS=46016,Flags=1,Size=0,Distance=0
+POS=26549,TS=47040,Flags=1,Size=0,Distance=0
+</StreamIndexEntries>
+<ExtraDataList=0,1,1>
+Size=3991,Codec=86021,4CC=0x0,Layout=0x3,Rate=48000,Format=fltp,BPS=32,Align=0
+2vorbis    Äª       ‚     ∏vorbis"   Xiph.Org libVorbis I 20150105 (??]    vorbis+BCV    1L ≈Ä–êU    `$)ìfI)•î°(yòîHI)•î≈0âòîâ≈cå1∆cå1∆cå 4d   Ä(	é£ÊIjŒ9g'ér†9iN8ß äQ‡9	¬ı&cn¶¥¶knŒ)%Y   @H!ÖRH!Öbà!Übà!ár»!ßúr
+*®†Ç
+2» ÉL2È§ìN:È®£é:Í(¥–B-¥“JL1’VcÆΩ]|sŒ9ÁúsŒ9ÁúsŒ	BCV    BdB!ÖRà)¶òr
+2»Ä–êU    Ä    GëI±À±Õ—$OÚ,Q5—3ESTMUUUUu]Wve◊vu◊v}YòÖ[∏}Y∏Ö[ÿÖ]˜ÖaÜaÜaÜa¯}ﬂ˜}ﬂ˜} 4d   †#9ñ„)¢"¢‚9¢ÑÜ¨ d    	í")í£I¶fjÆiõ∂h´∂mÀ≤,À≤ÑÜ¨        †iö¶iö¶iö¶iö¶iö¶iö¶iöfYñeYñeYñeYñeYñeYñeYñeYñeYñeYñeYñeYñeY@h»* @ @«q«q$ER$«r,Y »   @R,≈r4Gs4«s<«s<GtD…îLÕÙLY        @1≈q…—$OR-”r5Ws=◊sM◊u]WUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUÅ–êU    !ùfñjÄ3êa 4d Ä   °CY    à°‰ ö–öÛÕ9öÂ†©õ”¡âTõ'π©òõsŒ9ÁúlŒ„úsŒ) ô≈†ô–ösŒIö•†ô–ösŒyõ≠©“ösŒÁú∆aúsŒi“ö©ŸXõsŒY–öÊ®πõsŒâîõ'µπTõsŒ9ÁúsŒ9ÁúsŒ©^úŒ¡9·úsŒâ⁄õkπ	]úsŒ˘dúÓÕ	·úsŒ9ÁúsŒ9ÁúsŒ	BCV @  aÿ∆ùÇ }éb!¶!ìtèì†1»)§çéFJ©ÉPR'•tÇ–êU     ÑRH!ÖRH!ÖRH!Übà!ßúr
+*®§íä* (≥Ã2À,≥Ã2À¨√Œ:Î∞√C1¥“J,5’VcçµÊûsÆ9Hk•µ÷Z+•îRJ)• 4d   @ dêAÖRH!Üòr )ß†Ç
+Y      $œ————œÒQ%Q%—2-S3=UTUWvmYóu€∑Ö]ÿuﬂ◊}ﬂ◊ç_ÜeYñeYñeYñeYñeYñe	BCV     B!ÑRH!Öîbå1«úÉNB	Å–êU    Ä    Gq«ë…ë$K≤$M“,ÕÚ4OÛ4—EQ4MS]—u”eS6]”5e”Ue’veŸ∂e[∑}Y∂}ﬂ˜}ﬂ˜}ﬂ˜}ﬂ˜}ﬂ◊u 4d   †#9í")í"9é„HíÑÜ¨ d   †(é‚8é#Ií$Yí&yñgâö©ôûÈ©¢
+ÑÜ¨        †häßòäßàäÁàé(âñiâö™π¢l ÆÎ∫ÆÎ∫ÆÎ∫ÆÎ∫ÆÎ∫ÆÎ∫ÆÎ∫ÆÎ∫ÆÎ∫ÆÎ∫ÆÎ∫ÆÎ∫@h»* @ @Gr$Gr$ER$Er$Y »   ¿1CR$«≤,MÛ4OÛ4—=—3=UtEY        ¿êK±Õ—$QR-’R5’R-UT=UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU’4M”4Å–êï    Ñ≈°åRì‘ZÏ¡Xä1•Â1ÖÉñÑ«òB QN¢c
+!Â0ß“9Üåë⁄b
+ô2BYÒ=vå!á=ùBË$BCV Q  I"I$…Ú<¢GÙ,œ„â<Ä‰y4çÁIûGÛx IÙxMì<ëÁ—4    B°!+Ä8 ã$yIÚ<í‰y4M!äñ¶âœEû&äD”4°öñ¶y"œEö'äLQ5aöûËô&”tU¶©™\Yñ!ªû'ö&”T]¶©™dWñ!À   ,O3Möfä4Õ4â¢i¬4-Õ3Mö&ö4Õ4â¢i¬4=QTU¶©™LSUπÆÎ¬u=—TU¢©™LSUπÆÎ¬u  Hûfö4Õ4iö)E”ÑiZögö4Õ4iöhE”Ñiz¶Ë™L”Uô¢™R]◊ÖÎz¢©∫LSUâ¶™rU◊ÖÎ  –L—uâ¢´EUeöÆ
+’’D”uâ¢ÍEUeö™UUSvô¶Î2M◊•™ÆŸM’ïô¶Î2M◊•∫ÆW        Ä®ö≤Ã4]ói∫.’u]∏Æh™≤Ã4]ói∫.Wï]∏Æ  Ä Ä  @°!+Ä(  ã„Híey«ë$KÛ<é#IöÊy$…≤4MaYö&ä–4œEhöÁâ"    
+  l–îX†–êï @H Ä≈q$…≤4ÕÛD—4Mì‰Hí¶yûÁâ¢i™*I≤,MÛ<œE”TUñdYöÊy¢hö™™∫∞,MÛ<Q4MUu]hö¶â¢(ö¶™∫.4MÛDQMSU]öÊy¢hö™Í∫≤<OMSU]◊u                  8  A'Ua£	ÄBCV Q  Ä1à1≈òa
+J)%4äA)%îBH©§îIH-µ÷2()µ÷Z%•¥VZ §§÷Rkôî‘Zk≠  ∞ ∞°–êï @  ÉêRå1∆EH)∆sé"§cå9GRä1Áú£î*≈sŒQJïbå9Á(•J1∆òsîR∆cÃ9J©îå1Ê•îR∆cåRJ)cå1&  ®¿  ¿FëÕ	FÇ
+Y	 § 8«≤4M”<O%«±,œEQ4MÀq,ÀÛDQMìeiöÁâ¢i™*À“4œE”TU¶Èy¢hö™Í∫T’ÛD—4U’u          ‡	 @6¨épR4Xh»J   Ä1!dB»ÑB!Ñ  0‡  `B(4d% ê
+ @£cŒII©2F)Á î“ZeêRŒA(•µf)•úÉíRkÕRJ9'%•÷ö)ÉPJJ≠5ï2°îîZkŒâBJ≠≈ÿú!ÑîZã±9'c))µcsN∆RRj1∆ÊúSÆµcÕI)•\k-∆Z @hp  ;∞auÑì¢±¿BCV y  êRJ1∆cL)•cå1¶îRå1∆òSJ)∆cÃ9ßcå1Êúcå1∆sŒ1∆cå9Ácå1∆úsŒ1∆cŒ9Ácå1Áúså1∆ò  † Ä E6'	*4d%   √îsŒA(%ï
+!∆ tPJJ≠U1!ÑRRj-jŒ9!îíRk—sŒA°îîZã™ÖPJ)%•÷Zt-tRJI©µ£î"ÑêRJ≠µù!ÑíRj-∆Êúå•§‘Zå16Ád,%•÷bå±9Áúk≠µc≠Õ9Á\k)∂kmŒ9ß{l1÷XksŒ9ü[ã≠∆Z 0yp ÄJ∞qÜï§≥¬—‡BCV π åRå1ÊúsŒ9ÁúsŒI•sŒ9!ÑB!îJ1ÊúsB!ÑB(sŒ9!ÑB!ÑPJÈúsB!ÑB°î“9Á ÑB!ÑB)•sŒA!ÑB!ÑRJ!ÑB!ÑB•îRB!ÑB!ÑJ)•ÑB!ÑB!îRJ	!ÑB!ÑB(•îB!ÑB%ÑPJ)•îB°ÑB°îRJ)!ÑRJ)!ÑB)•îRB(°ÑB!îRJ)•îB)!ÑB•îRJ)•îRB!ÑJ)•îRJ)•ÑPB!îRJ)•îRB(%ÑB(•îRJ)•ÑPB!ÑPJ)•îRJ	!ÑB°  † Ä #*-ƒN3Æ<G2L@ÖÜ¨ “  C¨µ÷Zk≠µ÷ZkR÷Zk≠µ÷Zk≠µF)k≠µ÷Zk≠µ÷Zk©µ÷Zk≠µ÷Zk≠µ÷Zk≠µ÷Zk≠µ÷Zk≠µ÷Zk≠µ÷Zk≠µ÷Zk≠µ÷Zk≠µ÷Zk≠µ÷Zk≠µ÷Zk≠µ÷Zk≠µ÷Zk≠µ÷Zk≠µ÷Zk≠µ÷Zk≠µ÷Zk≠µ÷Zk≠µ÷Zk≠µ÷Zk≠µ÷Zk≠µ÷Zk≠µ÷Zk≠µ÷Zk≠µ÷ZK)•îRJ)•îRJ)•îRJ)•îRJ)•îRJ)•îRJ)•îRJ)•îRJ)•îRJ)•îRJ)•îRJ)•îRÿÄ—FRgVq„	"êBCV i Ä1å1ÊtJI)•
+!Á ÑNB*≠≈cÑêsB(%•÷bã1xB!î“Rl1∆X<!ÑRj-∆c≤ÖPJ))µ÷båµŸB(•îîZã1÷ZÉ1¶îíRj≠’Xc¨≈JH©µ÷bÃµ÷b|¨%•‘bå±∆Xk1∆∂Râ-∆Xkçµaåj≠≈Xc≠±÷Zå1¬ïbäµ÷Zs-Fcsã1÷XkÆπaå—πïZjç±÷Zã/∆ak¨5∆ZkŒ≈#Ñ∞µ∂kÕ5◊bå1∆c¨µ÷‹s1∆cÑê1∆kŒπ Ä‹ ƒ#	©≥+ç∏ÒH°!´ Ä Ä! Ñb≤ Ä	  V∞+≥¥j£∏©ìºËÉ¿'tƒfd»•TÃ‰D–#5‘b%ÿ°‹‡`°!+ 2  ƒYÕ9«ú+‰§µÿj,RRä1v» Â$≈Z2dÉ‘bÍ2àAj©t%∆T:ÖÉ\c+°cZ´±•:  Ä  ¿@ÑÃP`  § Ä¬C«pêK»(0(ŒIß @"3D"b1HL®ääÈ `qÅ! 246“..†À tq◊ÅÇÑ P@N∏·â7<·'Ëï:      x  H6ÄàhfÊ8:<>@BDFHJLNPRT      >  í "öô9éèêëíìîï  @     @         
+</ExtraDataList>
+</LibavReaderIndexFile>
