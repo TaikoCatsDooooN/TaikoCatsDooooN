@@ -90,9 +90,9 @@ namespace DTXMania
                 " \n" +
                 " \n" +
                 " ",
-                new string[] { "OFF", "完走!", "完走!激辛" }) );
+				new string[] { "OFF", "完走!", "完走!激辛", "特訓モード" }));
 
-            l.Add(new CItemList(nameof(CDTXMania.ConfigIni.ShinuchiMode), CItemBase.Eパネル種別.通常, CDTXMania.ConfigIni.ShinuchiMode ? 1 : 0, "", "", new string[] { "OFF", "ON" }));
+			l.Add(new CItemList(nameof(CDTXMania.ConfigIni.ShinuchiMode), CItemBase.Eパネル種別.通常, CDTXMania.ConfigIni.ShinuchiMode ? 1 : 0, "", "", new string[] { "OFF", "ON" }));
 
 			#endregion
 			#region [ 共通 SET切り替え/More/Return ]
@@ -143,7 +143,8 @@ namespace DTXMania
                         case 0: game = EGame.OFF; break;
                         case 1: game = EGame.完走叩ききりまショー; break;
                         case 2: game = EGame.完走叩ききりまショー激辛; break;
-                    }
+						case 3: game = EGame.特訓モード; break;
+					}
 					CDTXMania.ConfigIni.eGameMode = game;
 					break;
                 case (int)EOrder.ShinuchiMode:

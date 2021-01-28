@@ -11,6 +11,7 @@ namespace DTXMania
 		// プロパティ
 
 		public double dbBPM;
+		public readonly int[] NowMeasure = new int[2];
 		public int n小節番号;
         public double dbSCROLL;
 

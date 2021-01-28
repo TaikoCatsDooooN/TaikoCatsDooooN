@@ -37,6 +37,7 @@ namespace DTXMania
         const string FAILED = @"15_Failed\";
         const string RUNNER = @"16_Runner\";
         const string PUCHICHARA = @"18_PuchiChara\";
+        const string TRAINING = @"19_Training\";
 
         // InGame_Effects
         const string FIRE = @"Fire\";
@@ -574,6 +575,16 @@ namespace DTXMania
             #region PuichiChara
             PuchiChara = TxC(GAME + PUCHICHARA + @"0.png");
             #endregion
+            #region Training
+            Tokkun_DownBG = TxC(GAME + TRAINING + @"Down.png");
+            Tokkun_BigTaiko = TxC(GAME + TRAINING + @"BigTaiko.png");
+            Tokkun_ProgressBar = TxC(GAME + TRAINING + @"ProgressBar_Red.png");
+            Tokkun_ProgressBarWhite = TxC(GAME + TRAINING + @"ProgressBar_White.png");
+            Tokkun_GoGoPoint = TxC(GAME + TRAINING + @"GoGoPoint.png");
+            Tokkun_Background_Up = TxC(GAME + TRAINING + @"Background_Up.png");
+            Tokkun_BigNumber = TxC(GAME + TRAINING + @"BigNumber.png");
+            Tokkun_SmallNumber = TxC(GAME + TRAINING + @"SmallNumber.png");
+            #endregion
             #endregion
 
             #region 6_結果発表
@@ -998,6 +1009,17 @@ namespace DTXMania
             #endregion
             #endregion
 
+            #region 5.1_特訓モード
+            CDTXMania.tテクスチャの解放(ref Tokkun_DownBG);
+            CDTXMania.tテクスチャの解放(ref Tokkun_BigTaiko);
+            CDTXMania.tテクスチャの解放(ref Tokkun_ProgressBar);
+            CDTXMania.tテクスチャの解放(ref Tokkun_ProgressBarWhite);
+            CDTXMania.tテクスチャの解放(ref Tokkun_GoGoPoint);
+            CDTXMania.tテクスチャの解放(ref Tokkun_Background_Up);
+            CDTXMania.tテクスチャの解放(ref Tokkun_BigNumber);
+            CDTXMania.tテクスチャの解放(ref Tokkun_SmallNumber);
+            #endregion
+
             #region 6_結果発表
             CDTXMania.tテクスチャの解放(ref Result_Background);
             CDTXMania.tテクスチャの解放(ref Result_FadeIn);
@@ -1241,6 +1263,16 @@ namespace DTXMania
         #endregion
         #region PuchiChara
         public CTexture PuchiChara;
+        #endregion
+        #region Training
+        public CTexture Tokkun_DownBG;
+        public CTexture Tokkun_BigTaiko;
+        public CTexture Tokkun_ProgressBar;
+        public CTexture Tokkun_ProgressBarWhite;
+        public CTexture Tokkun_GoGoPoint;
+        public CTexture Tokkun_Background_Up;
+        public CTexture Tokkun_BigNumber;
+        public CTexture Tokkun_SmallNumber;
         #endregion
         #endregion
 

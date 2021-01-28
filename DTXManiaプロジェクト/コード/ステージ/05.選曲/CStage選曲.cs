@@ -654,7 +654,10 @@ namespace DTXMania
                         if ( CDTXMania.Input管理.Keyboard.bキーが押された( (int) SlimDX.DirectInput.Key.F5 ) )
 						{
 							CDTXMania.Skin.sound変更音.t再生する();
+                            if (CDTXMania.ConfigIni.eGameMode == EGame.特訓モード)
+                                CDTXMania.act文字コンソール.tPrint(0, 0, C文字コンソール.Eフォント種別.白, "GAME: TRAINING MODE");
                             C共通.bToggleBoolian( ref CDTXMania.ConfigIni.bSuperHard );
+
 						}
 						#endregion
 						#region [ F6 SCROLL ]

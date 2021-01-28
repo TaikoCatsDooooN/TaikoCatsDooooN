@@ -812,12 +812,13 @@ namespace DTXMania
                 "(1人プレイ専用)\n" +
                 "TYPE-A: 完走!叩ききりまショー!\n" +
                 "TYPE-B: 完走!叩ききりまショー!(激辛)\n" +
-                " \n",
+				"TYPE-C: 特訓モード\n" +
+				" \n",
                 " \n" +
                 " \n" +
                 " ",
-                new string[] { "OFF", "TYPE-A", "TYPE-B" });
-            this.list項目リスト.Add( this.iTaikoGameMode );
+				new string[] { "OFF", "TYPE-A", "TYPE-B", "TYPE-C" });
+			this.list項目リスト.Add( this.iTaikoGameMode );
 
             this.iTaikoBigNotesJudge = new CItemToggle( "BigNotesJudge", CDTXMania.ConfigIni.b大音符判定,
                 "大音符の両手判定を有効にします。",

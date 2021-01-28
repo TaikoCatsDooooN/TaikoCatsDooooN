@@ -598,7 +598,8 @@ namespace DTXMania
         public CAct演奏DrumsFooter actFooter;
         public CAct演奏DrumsRunner actRunner;
         public CAct演奏DrumsMob actMob;
-		public bool bPAUSE;
+        public CAct特訓モード actTokkun;
+        public bool bPAUSE;
         public bool[] bIsAlreadyCleared;
         public bool[] bIsAlreadyMaxed;
 		protected STDGBVALUE<bool> b演奏にMIDI入力を使った;
@@ -619,8 +620,8 @@ namespace DTXMania
         protected readonly int[] nパッド0Atoレーン07 = new int[] { 1, 2, 3, 4, 5, 6, 7, 1, 9, 0, 8, 8 };
 		public STDGBVALUE<CHITCOUNTOFRANK> nヒット数_Auto含まない;
 		protected STDGBVALUE<CHITCOUNTOFRANK> nヒット数_Auto含む;
-		protected int n現在のトップChip = -1;
-		protected int[] n最後に再生したBGMの実WAV番号 = new int[ 50 ];
+        public int n現在のトップChip = -1;
+        protected int[] n最後に再生したBGMの実WAV番号 = new int[ 50 ];
 		protected int n最後に再生したHHのチャンネル番号;
 		protected List<int> L最後に再生したHHの実WAV番号;		// #23921 2011.1.4 yyagi: change "int" to "List<int>", for recording multiple wav No.
 		protected STLANEVALUE<int> n最後に再生した実WAV番号;	// #26388 2011.11.8 yyagi: change "n最後に再生した実WAV番号.GUITAR" and "n最後に再生した実WAV番号.BASS"
@@ -684,9 +685,9 @@ namespace DTXMania
         protected int n現在の音符の顔番号;
 
         protected int nWaitButton;
-        
 
-        protected CDTX.CChip[] chip現在処理中の連打チップ = new CDTX.CChip[ 4 ];
+
+        public CDTX.CChip[] chip現在処理中の連打チップ = new CDTX.CChip[4];
 
         protected const int NOTE_GAP = 25;
         
@@ -3195,8 +3196,10 @@ namespace DTXMania
                                     //    this.actChara.ctChara_GoGo = new CCounter( 0, this.actChara.arゴーゴーモーション番号.Length - 1, dbPtn_GoGo, CSound管理.rc演奏用タイマ );
                                     //}
                                 }
-                                if ( pChip.nコース == this.n現在のコース[ nPlayer ] )
-                                    this.actPlayInfo.n小節番号++;
+                                if (!bPAUSE)
+                                {
+                                    actPlayInfo.NowMeasure[nPlayer] = pChip.n整数値_内部番号;
+                                }
                                 pChip.bHit = true;
                             }
                             this.t進行描画_チップ_小節線( configIni, ref dTX, ref pChip, nPlayer );

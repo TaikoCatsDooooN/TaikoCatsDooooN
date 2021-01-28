@@ -1886,7 +1886,7 @@ namespace DTXMania
             sw.WriteLine( "; STEALTHモード(0:OFF, 1:ドロン, 2:ステルス)" );
 			sw.WriteLine( "TaikoStealth={0}", (int) this.eSTEALTH );
 			sw.WriteLine();
-            sw.WriteLine( "; ゲーム(0:OFF, 1:完走!叩ききりまショー!, 2:完走!叩ききりまショー!(激辛) )" );
+			sw.WriteLine("; ゲーム(0:OFF, 1:完走!叩ききりまショー!, 2:完走!叩ききりまショー!(激辛) , 3:特訓モード)");
 			sw.WriteLine( "GameMode={0}", (int) this.eGameMode );
 			sw.WriteLine();
             sw.WriteLine( "; JUST(0:OFF, 1:ON)" );

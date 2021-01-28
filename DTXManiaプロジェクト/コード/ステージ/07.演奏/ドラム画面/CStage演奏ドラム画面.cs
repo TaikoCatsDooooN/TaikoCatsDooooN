@@ -63,6 +63,7 @@ namespace DTXMania
             base.list子Activities.Add(this.actRunner = new CAct演奏DrumsRunner());
             base.list子Activities.Add(this.actMob = new CAct演奏DrumsMob());
             base.list子Activities.Add(this.PuchiChara = new PuchiChara());
+            base.list子Activities.Add(this.actTokkun = new CAct特訓モード());
             #region[ 文字初期化 ]
             ST文字位置[] st文字位置Array = new ST文字位置[ 12 ];
 			ST文字位置 st文字位置 = new ST文字位置();
@@ -388,18 +389,21 @@ namespace DTXMania
                 {
                     this.t進行描画_AVI();
                 }
-                else
+                else if (CDTXMania.ConfigIni.bBGA有効)
                 {
-                    this.actBackground.On進行描画();
-                    this.actRollChara.On進行描画();
+                    if (CDTXMania.ConfigIni.eGameMode == EGame.特訓モード) actTokkun.On進行描画_背景();
+                    else actBackground.On進行描画();
                 }
-
-                if(!bDoublePlay && CDTXMania.ConfigIni.ShowDancer)
+                if (!CDTXMania.ConfigIni.bAVI有効)
+                {
+                    actRollChara.On進行描画();
+                }
+                if (!bDoublePlay && CDTXMania.ConfigIni.ShowDancer && CDTXMania.ConfigIni.eGameMode != EGame.特訓モード)
                 {
                     actDancer.On進行描画();
                 }
 
-                if(!bDoublePlay && CDTXMania.ConfigIni.ShowFooter)
+                if(!bDoublePlay && CDTXMania.ConfigIni.ShowFooter && CDTXMania.ConfigIni.eGameMode != EGame.特訓モード)
                     this.actFooter.On進行描画();
 
                 //this.t進行描画_グラフ();   // #24074 2011.01.23 add ikanick
@@ -412,7 +416,7 @@ namespace DTXMania
                 if( CDTXMania.ConfigIni.ShowChara )
                     this.actChara.On進行描画();
 
-                if(CDTXMania.ConfigIni.ShowMob)
+                if(CDTXMania.ConfigIni.ShowMob && CDTXMania.ConfigIni.eGameMode != EGame.特訓モード)
                     this.actMob.On進行描画();
 
                 if ( CDTXMania.ConfigIni.eGameMode != EGame.OFF )
@@ -435,7 +439,7 @@ namespace DTXMania
                 if( ( CDTXMania.ConfigIni.eClipDispType == EClipDispType.ウィンドウのみ || CDTXMania.ConfigIni.eClipDispType == EClipDispType.両方 ) && CDTXMania.ConfigIni.nPlayerCount == 1 )
                     this.actAVI.t窓表示();
 
-				if( !CDTXMania.ConfigIni.bNoInfo )
+				if( !CDTXMania.ConfigIni.bNoInfo && CDTXMania.ConfigIni.eGameMode != EGame.特訓モード)
                     this.t進行描画_ゲージ();
 
                 this.actLaneTaiko.ゴーゴー炎();
@@ -463,7 +467,7 @@ namespace DTXMania
 
                 if ( !CDTXMania.ConfigIni.bNoInfo )
 			        this.t進行描画_コンボ();
-                if( !CDTXMania.ConfigIni.bNoInfo )
+                if( !CDTXMania.ConfigIni.bNoInfo && CDTXMania.ConfigIni.eGameMode != EGame.特訓モード)
 				    this.t進行描画_スコア();
 
                 this.actChipEffects.On進行描画();
@@ -492,7 +496,10 @@ namespace DTXMania
                 //this.actEnd.On進行描画();
 				this.t進行描画_STAGEFAILED();
 
-               
+                if (CDTXMania.ConfigIni.eGameMode == EGame.特訓モード)
+                {
+                    actTokkun.On進行描画();
+                }
 
                 bIsFinishedEndAnime = this.actEnd.On進行描画() == 1 ? true : false;
 				bIsFinishedFadeout = this.t進行描画_フェードイン_アウト();
@@ -500,18 +507,31 @@ namespace DTXMania
                 //演奏終了→演出表示→フェードアウト
                 if( bIsFinishedPlaying && base.eフェーズID == CStage.Eフェーズ.共通_通常状態 )
                 {
-                    base.eフェーズID = CStage.Eフェーズ.演奏_演奏終了演出;
-                    this.actEnd.Start();
-                    if (CDTXMania.Skin.Game_Chara_Ptn_10combo_Max != 0)
+                    if (CDTXMania.ConfigIni.eGameMode == EGame.特訓モード)
                     {
-                        if (CDTXMania.stage演奏ドラム画面.actGauge.db現在のゲージ値[0] >= 100)
+                        bIsFinishedPlaying = false;
+                        CDTXMania.Skin.sound特訓停止音.t再生する();
+                        actTokkun.t演奏を停止する();
+
+                        actTokkun.n現在の小節線 = CDTXMania.stage演奏ドラム画面.actPlayInfo.NowMeasure[0];
+                        actTokkun.t譜面の表示位置を合わせる(true);
+                    }
+                    else
+                    {
+                        base.eフェーズID = CStage.Eフェーズ.演奏_演奏終了演出;
+
+                        this.actEnd.Start();
+                        if (CDTXMania.Skin.Game_Chara_Ptn_10combo_Max != 0)
                         {
-                            double dbUnit = (((60.0 / (CDTXMania.stage演奏ドラム画面.actPlayInfo.dbBPM))));
-                            this.actChara.アクションタイマーリセット();
-                            this.actChara.ctキャラクターアクション_10コンボMAX = new CCounter(0, CDTXMania.Skin.Game_Chara_Ptn_10combo_Max - 1, (dbUnit / CDTXMania.Skin.Game_Chara_Ptn_10combo_Max) * 2, CSound管理.rc演奏用タイマ);
-                            this.actChara.ctキャラクターアクション_10コンボMAX.t進行db();
-                            this.actChara.ctキャラクターアクション_10コンボMAX.db現在の値 = 0D;
-                            this.actChara.bマイどんアクション中 = true;
+                            if (CDTXMania.stage演奏ドラム画面.actGauge.db現在のゲージ値[0] >= 100)
+                            {
+                                double dbUnit = (((60.0 / (CDTXMania.stage演奏ドラム画面.actPlayInfo.dbBPM))));
+                                this.actChara.アクションタイマーリセット();
+                                this.actChara.ctキャラクターアクション_10コンボMAX = new CCounter(0, CDTXMania.Skin.Game_Chara_Ptn_10combo_Max - 1, (dbUnit / CDTXMania.Skin.Game_Chara_Ptn_10combo_Max) * 2, CSound管理.rc演奏用タイマ);
+                                this.actChara.ctキャラクターアクション_10コンボMAX.t進行db();
+                                this.actChara.ctキャラクターアクション_10コンボMAX.db現在の値 = 0D;
+                                this.actChara.bマイどんアクション中 = true;
+                            }
                         }
                     }
                 }
@@ -572,6 +592,7 @@ namespace DTXMania
         public CAct演奏Drums演奏終了演出 actEnd;
         private CAct演奏Drumsゲームモード actGame;
         public CAct演奏Drums背景 actBackground;
+        public CAct特訓モード actTokkun;
         public PuchiChara PuchiChara;
         private bool bフィルイン中;
 		private readonly Eパッド[] eチャンネルtoパッド = new Eパッド[]
@@ -1997,7 +2018,7 @@ namespace DTXMania
 					dTX.tWave再生位置自動補正();
 				}
 			}
-			if ( configIni.b演奏情報を表示する )
+			if ( configIni.b演奏情報を表示する || CDTXMania.ConfigIni.eGameMode == EGame.特訓モード)
 			{
                 int n小節番号 = this.actPlayInfo.n小節番号;
                 //int n小節番号 = pChip.n整数値;
@@ -2220,11 +2241,16 @@ namespace DTXMania
 
         private void t進行描画_リアルタイム判定数表示()
         {
-            if( CDTXMania.ConfigIni.nPlayerCount == 1 ? ( CDTXMania.ConfigIni.bJudgeCountDisplay && !CDTXMania.ConfigIni.b太鼓パートAutoPlay ) : false )
+            var showJudgeInfo = false;
+
+            if (CDTXMania.ConfigIni.nPlayerCount == 1 ? (CDTXMania.ConfigIni.bJudgeCountDisplay && !CDTXMania.ConfigIni.b太鼓パートAutoPlay) : false) showJudgeInfo = true;
+            if (CDTXMania.ConfigIni.eGameMode == EGame.特訓モード) showJudgeInfo = true;
+
+            if (showJudgeInfo)
             {
                 //ボードの横幅は333px
                 //数字フォントの小さいほうはリザルトのものと同じ。
-                if( CDTXMania.Tx.Judge_Meter != null )
+                if ( CDTXMania.Tx.Judge_Meter != null )
                     CDTXMania.Tx.Judge_Meter.t2D描画( CDTXMania.app.Device, 0, 360 );
 
                 this.t小文字表示( 102, 494, string.Format( "{0,4:###0}", this.nヒット数_Auto含まない.Drums.Perfect.ToString() ), false );

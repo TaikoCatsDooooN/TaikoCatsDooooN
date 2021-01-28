@@ -387,6 +387,7 @@ namespace DTXMania
             public bool bGOGOTIME = false; //2018.03.11 k1airera0467 ゴーゴータイム内のチップであるか
             public int nList上の位置;
             public bool IsFixedSENote;
+            public bool IsHitted = false;
             public bool bBPMチップである
 			{
 				get
@@ -1486,14 +1487,23 @@ namespace DTXMania
 						if ( nCurrentTime > wc.n再生開始時刻[ i ] )
 						{
 							long nAbsTimeFromStartPlaying = nCurrentTime - wc.n再生開始時刻[ i ];
-							//Trace.TraceInformation( "再生位置自動補正: {0}, seek先={1}ms, 全音長={2}ms",
-							//    Path.GetFileName( wc.rSound[ 0 ].strファイル名 ),
-							//    nAbsTimeFromStartPlaying,
-							//    wc.rSound[ 0 ].n総演奏時間ms
-							//);
-							// wc.rSound[ i ].t再生位置を変更する( wc.rSound[ i ].t時刻から位置を返す( nAbsTimeFromStartPlaying ) );
-							wc.rSound[ i ].t再生位置を変更する( nAbsTimeFromStartPlaying );	// WASAPI/ASIO用
-						}
+                            //Trace.TraceInformation( "再生位置自動補正: {0}, seek先={1}ms, 全音長={2}ms",
+                            //    Path.GetFileName( wc.rSound[ 0 ].strファイル名 ),
+                            //    nAbsTimeFromStartPlaying,
+                            //    wc.rSound[ 0 ].n総演奏時間ms
+                            //);
+                            // wc.rSound[ i ].t再生位置を変更する( wc.rSound[ i ].t時刻から位置を返す( nAbsTimeFromStartPlaying ) );
+                            // WASAPI/ASIO用↓
+                            if (!CDTXMania.stage演奏ドラム画面.bPAUSE)
+                            {
+                                if (wc.rSound[i].b一時停止中) wc.rSound[i].t再生を再開する(nAbsTimeFromStartPlaying);
+                                else wc.rSound[i].t再生位置を変更する(nAbsTimeFromStartPlaying);
+                            }
+                            else
+                            {
+                                wc.rSound[i].t再生を一時停止する();
+                            }
+                        }
 					}
 				}
 			}
