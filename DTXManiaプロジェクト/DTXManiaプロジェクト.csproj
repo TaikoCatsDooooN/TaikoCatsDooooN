@@ -51,6 +51,7 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <Optimize>false</Optimize>
     <LangVersion>7.3</LangVersion>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <OutputPath>..\Test\</OutputPath>
@@ -63,6 +64,7 @@
     <NoWarn>0219</NoWarn>
     <UseVSHostingProcess>true</UseVSHostingProcess>
     <LangVersion>7.3</LangVersion>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>TJAPlayer3.manifest</ApplicationManifest>
@@ -290,8 +292,11 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>copy /Y "$(TargetPath)" "$(SolutionDir)\実行時フォルダ"
+move /Y "$(TargetDir)\Bass.Net.dll" "$(TargetDir)dll"
+move /Y "$(TargetDir)\DirectShowLib-2005.dll" "$(TargetDir)dll"
+move /Y "$(TargetDir)\FDK.dll" "$(TargetDir)dll"
+move /Y "$(TargetDir)\SlimDXc_net20x86_Jun2010.dll" "$(TargetDir)dll"</PostBuildEvent>
   </PropertyGroup>
   <Import Project="packages\SharpDX.2.6.3\build\SharpDX.targets" Condition="Exists('packages\SharpDX.2.6.3\build\SharpDX.targets')" />
 </Project>
