@@ -8,7 +8,6 @@ move /Y "%24%28TargetDir%29\FDK.dll" "%24%28TargetDir%29dll"
 move /Y "%24%28TargetDir%29\SlimDXc_net20x86_Jun2010.dll" "%24%28TargetDir%29dll"
 </StartArguments>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
-    <StartAction>Project</StartAction>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <StartAction>Project</StartAction>
@@ -16,7 +15,7 @@ move /Y "%24%28TargetDir%29\SlimDXc_net20x86_Jun2010.dll" "%24%28TargetDir%29dll
     </StartProgram>
   </PropertyGroup>
   <PropertyGroup>
-    <PublishUrlHistory>publish\</PublishUrlHistory>
+    <PublishUrlHistory />
     <InstallUrlHistory />
     <SupportUrlHistory />
     <UpdateUrlHistory />
