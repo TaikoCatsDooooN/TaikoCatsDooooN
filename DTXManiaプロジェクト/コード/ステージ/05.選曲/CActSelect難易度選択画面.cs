@@ -189,7 +189,7 @@ namespace DTXMania
                 ct表譜面へ = new CCounter(0, 992, 1, CDTXMania.Timer);
             }
 
-            this.sound難しさを選ぶ = CDTXMania.Sound管理.tサウンドを生成する(CSkin.Path(@"Sounds\SongSelect\Difficulty_Select.ogg"), ESoundGroup.SoundEffect);
+            this.sound難しさを選ぶ = CDTXMania.Sound管理.tサウンドを生成する(CSkin.Path(@"Sounds\SongSelect\Difficulty_Select.ogg"), ESoundGroup.Voice);
             this.sound裏切り替え音 = CDTXMania.Sound管理.tサウンドを生成する(CSkin.Path(@"Sounds\SongSelect\Edit_Switch.ogg"), ESoundGroup.SoundEffect);
             base.OnManagedリソースの作成();
         }
