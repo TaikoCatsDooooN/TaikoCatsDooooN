@@ -110,7 +110,8 @@ namespace DTXMania
                     }
                     for (int n = stRunners[i].nOldValue; n < stRunners[i].ct進行.n現在の値; n++)
                     {
-                        stRunners[i].fX += (float)CDTXMania.stage演奏ドラム画面.actPlayInfo.dbBPM / 18;
+                        double dbBPM = CDTXMania.stage演奏ドラム画面.actPlayInfo.dbBPM >= 0 ? CDTXMania.stage演奏ドラム画面.actPlayInfo.dbBPM : CDTXMania.stage演奏ドラム画面.actPlayInfo.dbBPM * -1;
+                        stRunners[i].fX += (float)dbBPM / 18;
                         int Width = 1280 / Ptn;
                         stRunners[i].nNowPtn = (int)stRunners[i].fX / Width;
                     }

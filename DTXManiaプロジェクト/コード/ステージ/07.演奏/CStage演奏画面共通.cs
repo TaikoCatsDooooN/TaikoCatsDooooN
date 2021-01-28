@@ -1363,6 +1363,9 @@ namespace DTXMania
                                 this.tRollProcess( pChip, CSound管理.rc演奏用タイマ.n現在時刻ms, 1, nNowInput, 0, nPlayer );
                             }
 
+                            if (CDTXMania.stage演奏ドラム画面.actPlayInfo.dbBPM < 0 && (CDTXMania.ConfigIni.eScrollMode == EScrollMode.BMSCROLL || CDTXMania.ConfigIni.eScrollMode == EScrollMode.HBSCROLL))
+                                pChip.fBMSCROLLTime -= CDTXMania.stage演奏ドラム画面.actPlayInfo.dbBPM * -0.05;
+
                             //if ((int)CSound管理.rc演奏用タイマ.n現在時刻ms >= pChip.nノーツ終了時刻ms)
                             //{
                             //    if (actChara.CharaAction_Balloon_Breaking.b進行中)
@@ -2880,7 +2883,7 @@ namespace DTXMania
                 if( pChip.nノーツ終了時刻ms != 0 )
                     pChip.nバーからのノーツ末端距離dot.Taiko = (int) ( ( ( pChip.nノーツ終了時刻ms - n現在時刻ms) * pChip.dbBPM * pChip.dbSCROLL * (db現在の譜面スクロール速度.Drums + 1.5 ) ) / 628.7 );
 
-                if( configIni.eScrollMode == EScrollMode.BMSCROLL || configIni.eScrollMode == EScrollMode.HSSCROLL )
+                if( configIni.eScrollMode == EScrollMode.BMSCROLL || configIni.eScrollMode == EScrollMode.HBSCROLL )
                 {
                     if( !play_bpm_time.HasValue )
                     {

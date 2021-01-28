@@ -866,6 +866,11 @@ namespace DTXMania
                             break;
                     }
 
+                    if (CDTXMania.ConfigIni.b太鼓パートAutoPlay/*[0]*/ && (nPad >= 12 && nPad <= 15))//2020.05.18 Mr-Ojii オート時の入力キャンセル
+                        break;
+                    else if (CDTXMania.ConfigIni.b太鼓パートAutoPlay/*[1]*/ && (nPad >= 16 && nPad <= 19))
+                        break;
+
                     CDTX.CChip chipNoHit = this.r指定時刻に一番近い未ヒットChipを過去方向優先で検索する( nTime, nInputAdjustTime, nUsePlayer );
                     E判定 e判定 = ( chipNoHit != null ) ? this.e指定時刻からChipのJUDGEを返す( nTime, chipNoHit, nInputAdjustTime ) : E判定.Miss;
 
@@ -1412,7 +1417,7 @@ namespace DTXMania
                         y = CDTXMania.Skin.nScrollFieldY[ nPlayer ];
                         if( CDTXMania.ConfigIni.eScrollMode == EScrollMode.Normal )
                             y += (int) ( ( ( pChip.n発声時刻ms - CSound管理.rc演奏用タイマ.n現在時刻 ) * pChip.dbBPM * pChip.dbSCROLL_Y * ( this.act譜面スクロール速度.db現在の譜面スクロール速度.Drums + 1.5 ) ) / 628.7 );
-                        else if( CDTXMania.ConfigIni.eScrollMode == EScrollMode.BMSCROLL || CDTXMania.ConfigIni.eScrollMode == EScrollMode.HSSCROLL )
+                        else if( CDTXMania.ConfigIni.eScrollMode == EScrollMode.BMSCROLL || CDTXMania.ConfigIni.eScrollMode == EScrollMode.HBSCROLL )
                             y += pChip.nバーからの距離dot.Taiko;
                     }
 
