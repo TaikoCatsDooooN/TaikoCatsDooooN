@@ -399,18 +399,6 @@ namespace DTXMania
 					}
 				}
 			}
-			public bool bWAVを使うチャンネルである
-			{
-				get
-				{
-					switch( this.nチャンネル番号 )
-					{
-						case 0x01:
-							return true;
-					}
-					return false;
-				}
-			}
 			public bool b自動再生音チャンネルである
 			{
 				get
@@ -559,9 +547,9 @@ namespace DTXMania
 			{
 				int nDuration = 0;
 
-				if ( this.bWAVを使うチャンネルである )		// WAV
-				{
-					CDTX.CWAV wc;
+                if (this.nチャンネル番号 == 0x01)       // WAV
+                {
+                    CDTX.CWAV wc;
 					CDTXMania.DTX.listWAV.TryGetValue( this.n整数値_内部番号, out wc );
 					if ( wc == null )
 					{
@@ -1747,119 +1735,114 @@ namespace DTXMania
 
         }
 
-		#region [ チップの再生と停止 ]
-		public void tチップの再生( CChip pChip, long n再生開始システム時刻ms, int nLane )
-		{
-			if( pChip.n整数値_内部番号 >= 0 )
-			{
-				if( ( nLane < (int) Eレーン.LC ) || ( (int) Eレーン.BGM < nLane ) )
-				{
-					throw new ArgumentOutOfRangeException();
-				}
-				if( this.listWAV.TryGetValue( pChip.n整数値_内部番号, out CWAV wc ) )
-				{
-					int index = wc.n現在再生中のサウンド番号 = ( wc.n現在再生中のサウンド番号 + 1 ) % nPolyphonicSounds;
-					if( ( wc.rSound[ 0 ] != null ) && 
-						( wc.rSound[ 0 ].bストリーム再生する || wc.rSound[index] == null ) )
-					{
-						index = wc.n現在再生中のサウンド番号 = 0;
-					}
-					CSound sound = wc.rSound[ index ];
-					if( sound != null )
-					{
-						sound.db周波数倍率 = 1.0;
-						sound.db再生速度 = ( (double) CDTXMania.ConfigIni.n演奏速度 ) / 20.0;
-						// 再生速度によって、WASAPI/ASIOで使う使用mixerが決まるため、付随情報の設定(音量/PAN)は、再生速度の設定後に行う
+        #region [ チップの再生と停止 ]
+        public void tチップの再生(CChip pChip, long n再生開始システム時刻ms)
+        {
+            if (pChip.n整数値_内部番号 >= 0)
+            {
+                if (this.listWAV.TryGetValue(pChip.n整数値_内部番号, out CWAV wc))
+                {
+                    int index = wc.n現在再生中のサウンド番号 = (wc.n現在再生中のサウンド番号 + 1) % nPolyphonicSounds;
+                    if ((wc.rSound[0] != null) &&
+                        (wc.rSound[0].bストリーム再生する || wc.rSound[index] == null))
+                    {
+                        index = wc.n現在再生中のサウンド番号 = 0;
+                    }
+                    CSound sound = wc.rSound[index];
+                    if (sound != null)
+                    {
+                        sound.db再生速度 = ((double)CDTXMania.ConfigIni.n演奏速度) / 20.0;
+                        // 再生速度によって、WASAPI/ASIOで使う使用mixerが決まるため、付随情報の設定(音量/PAN)は、再生速度の設定後に行う
 
                         // 2018-08-27 twopointzero - DON'T attempt to load (or queue scanning) loudness metadata here.
                         //                           This code is called right after loading the .tja, and that code
                         //                           will have just made such an attempt.
-						CDTXMania.SongGainController.Set( wc.SongVol, wc.SongLoudnessMetadata, sound );
+                        CDTXMania.SongGainController.Set(wc.SongVol, wc.SongLoudnessMetadata, sound);
 
-						sound.n位置 = wc.n位置;
-						sound.t再生を開始する();
-					}
-					wc.n再生開始時刻[ wc.n現在再生中のサウンド番号 ] = n再生開始システム時刻ms;
-					this.tWave再生位置自動補正( wc );
-				}
-			}
-		}
-		public void t各自動再生音チップの再生時刻を変更する( int nBGMAdjustの増減値 )
-		{
-			this.nBGMAdjust += nBGMAdjustの増減値;
-			for( int i = 0; i < this.listChip.Count; i++ )
-			{
-				int nChannelNumber = this.listChip[ i ].nチャンネル番号;
-				if( ( (
-						( nChannelNumber == 1 ) ||
-						( ( 0x61 <= nChannelNumber ) && ( nChannelNumber <= 0x69 ) )
-					  ) ||
-						( ( 0x70 <= nChannelNumber ) && ( nChannelNumber <= 0x79 ) )
-					) ||
-					( ( ( 0x80 <= nChannelNumber ) && ( nChannelNumber <= 0x89 ) ) || ( ( 0x90 <= nChannelNumber ) && ( nChannelNumber <= 0x92 ) ) )
-				  )
-				{
-					this.listChip[ i ].n発声時刻ms += nBGMAdjustの増減値;
-				}
-			}
-			foreach( CWAV cwav in this.listWAV.Values )
-			{
-				for ( int j = 0; j < nPolyphonicSounds; j++ )
-				{
-					if( ( cwav.rSound[ j ] != null ) && cwav.rSound[ j ].b再生中 )
-					{
-						cwav.n再生開始時刻[ j ] += nBGMAdjustの増減値;
-					}
-				}
-			}
-		}
-		public void t全チップの再生一時停止()
-		{
-			foreach( CWAV cwav in this.listWAV.Values )
-			{
-				for ( int i = 0; i < nPolyphonicSounds; i++ )
-				{
-					if( ( cwav.rSound[ i ] != null ) && cwav.rSound[ i ].b再生中 )
-					{
-						cwav.rSound[ i ].t再生を一時停止する();
-						cwav.n一時停止時刻[ i ] = CSound管理.rc演奏用タイマ.nシステム時刻ms;
-					}
-				}
-			}
-		}
-		public void t全チップの再生再開()
-		{
-			foreach( CWAV cwav in this.listWAV.Values )
-			{
-				for ( int i = 0; i < nPolyphonicSounds; i++ )
-				{
-					if( ( cwav.rSound[ i ] != null ) && cwav.rSound[ i ].b一時停止中 )
-					{
-						//long num1 = cwav.n一時停止時刻[ i ];
-						//long num2 = cwav.n再生開始時刻[ i ];
-						cwav.rSound[ i ].t再生を再開する( cwav.n一時停止時刻[ i ] - cwav.n再生開始時刻[ i ] );
-						cwav.n再生開始時刻[ i ] += CSound管理.rc演奏用タイマ.nシステム時刻ms - cwav.n一時停止時刻[ i ];
-					}
-				}
-			}
-		}
-		public void t全チップの再生停止()
-		{
-			foreach( CWAV cwav in this.listWAV.Values )
-			{
-				this.tWavの再生停止( cwav.n内部番号 );
-			}
-		}
-		public void t全チップの再生停止とミキサーからの削除()
-		{
-			foreach( CWAV cwav in this.listWAV.Values )
-			{
-				this.tWavの再生停止( cwav.n内部番号, true );
-			}
-		}
-		#endregion
+                        sound.n位置 = wc.n位置;
+                        sound.t再生を開始する();
+                    }
+                    wc.n再生開始時刻[wc.n現在再生中のサウンド番号] = n再生開始システム時刻ms;
+                    this.tWave再生位置自動補正(wc);
+                }
+            }
+        }
+        public void t各自動再生音チップの再生時刻を変更する(int nBGMAdjustの増減値)
+        {
+            this.nBGMAdjust += nBGMAdjustの増減値;
+            for (int i = 0; i < this.listChip.Count; i++)
+            {
+                int nChannelNumber = this.listChip[i].nチャンネル番号;
+                if (((
+                        (nChannelNumber == 1) ||
+                        ((0x61 <= nChannelNumber) && (nChannelNumber <= 0x69))
+                      ) ||
+                        ((0x70 <= nChannelNumber) && (nChannelNumber <= 0x79))
+                    ) ||
+                    (((0x80 <= nChannelNumber) && (nChannelNumber <= 0x89)) || ((0x90 <= nChannelNumber) && (nChannelNumber <= 0x92)))
+                  )
+                {
+                    this.listChip[i].n発声時刻ms += nBGMAdjustの増減値;
+                }
+            }
+            foreach (CWAV cwav in this.listWAV.Values)
+            {
+                for (int j = 0; j < nPolyphonicSounds; j++)
+                {
+                    if ((cwav.rSound[j] != null) && cwav.rSound[j].b再生中)
+                    {
+                        cwav.n再生開始時刻[j] += nBGMAdjustの増減値;
+                    }
+                }
+            }
+        }
+        public void t全チップの再生一時停止()
+        {
+            foreach (CWAV cwav in this.listWAV.Values)
+            {
+                for (int i = 0; i < nPolyphonicSounds; i++)
+                {
+                    if ((cwav.rSound[i] != null) && cwav.rSound[i].b再生中)
+                    {
+                        cwav.rSound[i].t再生を一時停止する();
+                        cwav.n一時停止時刻[i] = CSound管理.rc演奏用タイマ.nシステム時刻ms;
+                    }
+                }
+            }
+        }
+        public void t全チップの再生再開()
+        {
+            foreach (CWAV cwav in this.listWAV.Values)
+            {
+                for (int i = 0; i < nPolyphonicSounds; i++)
+                {
+                    if ((cwav.rSound[i] != null) && cwav.rSound[i].b一時停止中)
+                    {
+                        //long num1 = cwav.n一時停止時刻[ i ];
+                        //long num2 = cwav.n再生開始時刻[ i ];
+                        cwav.rSound[i].t再生を再開する(cwav.n一時停止時刻[i] - cwav.n再生開始時刻[i]);
+                        cwav.n再生開始時刻[i] += CSound管理.rc演奏用タイマ.nシステム時刻ms - cwav.n一時停止時刻[i];
+                    }
+                }
+            }
+        }
+        public void t全チップの再生停止()
+        {
+            foreach (CWAV cwav in this.listWAV.Values)
+            {
+                this.tWavの再生停止(cwav.n内部番号);
+            }
+        }
+        public void t全チップの再生停止とミキサーからの削除()
+        {
+            foreach (CWAV cwav in this.listWAV.Values)
+            {
+                this.tWavの再生停止(cwav.n内部番号, true);
+            }
+        }
+        #endregion
 
-		public void t入力( string strファイル名, bool bヘッダのみ )
+        public void t入力( string strファイル名, bool bヘッダのみ )
 		{
 			this.t入力( strファイル名, bヘッダのみ, 1.0, 0, 0, 0, false );
 		}
@@ -2608,8 +2591,8 @@ namespace DTXMania
 						#region [ チップの種類を分類し、対応するフラグを立てる ]
 						foreach ( CChip chip in this.listChip )
 						{
-                            if ( ( chip.bWAVを使うチャンネルである && this.listWAV.TryGetValue( chip.n整数値_内部番号, out CWAV cwav ) ) && !cwav.listこのWAVを使用するチャンネル番号の集合.Contains( chip.nチャンネル番号 ) )
-							{
+                            if ((chip.nチャンネル番号 == 0x01 && this.listWAV.TryGetValue(chip.n整数値_内部番号, out CWAV cwav)) && !cwav.listこのWAVを使用するチャンネル番号の集合.Contains(chip.nチャンネル番号))
+                            {
                                 cwav.listこのWAVを使用するチャンネル番号の集合.Add( chip.nチャンネル番号 );
 
 								int c = chip.nチャンネル番号 >> 4;
@@ -7859,14 +7842,14 @@ namespace DTXMania
 				{
 					chip.e楽器パート = E楽器パート.BASS;
 				}
-				//-----------------
-				#endregion
+                //-----------------
+                #endregion
 
-				#region [ 無限定義への対応 → 内部番号の取得。]
-				//-----------------
-				if( chip.bWAVを使うチャンネルである )
-				{
-					chip.n整数値_内部番号 = this.n無限管理WAV[ nオブジェクト数値 ];	// これが本当に一意なWAV番号となる。（無限定義の場合、chip.n整数値 は一意である保証がない。）
+                #region [ 無限定義への対応 → 内部番号の取得。]
+                //-----------------
+                if (chip.nチャンネル番号 == 0x01)
+                {
+                    chip.n整数値_内部番号 = this.n無限管理WAV[ nオブジェクト数値 ];	// これが本当に一意なWAV番号となる。（無限定義の場合、chip.n整数値 は一意である保証がない。）
 				}
 				else if( chip.bBPMチップである )
 				{

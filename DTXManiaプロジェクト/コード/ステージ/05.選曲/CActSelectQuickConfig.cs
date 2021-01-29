@@ -63,7 +63,7 @@ namespace DTXMania
 				"(ScrollSpeed=x0.5 means half speed)" ) );
 			#endregion
 			#region [ 共通 Dark/Risky/PlaySpeed ]
-			l.Add( new CItemInteger( "演奏速度", 5, 40, CDTXMania.ConfigIni.n演奏速度,
+			l.Add( new CItemInteger( "演奏速度", 5, 400, CDTXMania.ConfigIni.n演奏速度,
 				"曲の演奏速度を、速くしたり遅くした\n" +
 				"りすることができます。\n" +
 				"（※一部のサウンドカードでは正しく\n" +
@@ -90,7 +90,7 @@ namespace DTXMania
                 " \n" +
                 " \n" +
                 " ",
-				new string[] { "OFF", "完走!", "完走!激辛", "特訓モード" }));
+				new string[] { "OFF", "完走!", "完走!激辛", "特訓" }));
 
 			l.Add(new CItemList(nameof(CDTXMania.ConfigIni.ShinuchiMode), CItemBase.Eパネル種別.通常, CDTXMania.ConfigIni.ShinuchiMode ? 1 : 0, "", "", new string[] { "OFF", "ON" }));
 
