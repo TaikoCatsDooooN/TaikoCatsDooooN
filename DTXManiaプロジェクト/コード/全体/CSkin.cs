@@ -36,9 +36,6 @@ namespace DTXMania
         SOUND曲決定音,
         SOUND成績発表,
         SOUND回転音,
-        SOUND特訓再生,
-        SOUND特訓停止,
-        SOUND特訓スクロール,
         Count				// システムサウンド総数の計算用
     }
 
@@ -413,15 +410,6 @@ namespace DTXMania
 
                     case Eシステムサウンド.SOUND回転音:
                         return this.sound回転音;
-
-                    case Eシステムサウンド.SOUND特訓再生:
-                        return this.sound特訓再生音;
-
-                    case Eシステムサウンド.SOUND特訓停止:
-                        return this.sound特訓停止音;
-
-                    case Eシステムサウンド.SOUND特訓スクロール:
-                        return this.sound特訓スクロール音;
                 }
 				throw new IndexOutOfRangeException();
 			}
@@ -498,14 +486,8 @@ namespace DTXMania
                     case 19:
                         return this.sound回転音;
 
-                    case 20:
-                        return this.sound特訓再生音;
-
-                    case 21:
-                        return this.sound特訓停止音;
-
-                    case 22:
-                        return this.sound特訓スクロール音;
+                    //case 20:
+                        //return this.soundJPOP;
                 }
 				throw new IndexOutOfRangeException();
 			}
@@ -643,11 +625,12 @@ namespace DTXMania
 			this.sound変更音			= new Cシステムサウンド( @"Sounds\Change.ogg",			false, false, false, ESoundGroup.SoundEffect );
 			this.sound取消音			= new Cシステムサウンド( @"Sounds\Cancel.ogg",			false, false, true, ESoundGroup.SoundEffect  );
 			this.sound歓声音			= new Cシステムサウンド( @"Sounds\Audience.ogg",		false, false, true, ESoundGroup.SoundEffect );
-            this.soundSTAGEFAILED音		= new Cシステムサウンド( @"Sounds\Stage failed.ogg",	false, true,  true, ESoundGroup.SoundEffect);
-			this.soundゲーム開始音		= new Cシステムサウンド( @"Sounds\Game start.ogg",		false, false, false, ESoundGroup.SoundEffect);
-			this.soundゲーム終了音		= new Cシステムサウンド( @"Sounds\Game end.ogg",		false, true,  false, ESoundGroup.SoundEffect);
-			this.soundステージクリア音	= new Cシステムサウンド( @"Sounds\Stage clear.ogg",		false, true,  true, ESoundGroup.SoundEffect);
-			this.soundフルコンボ音		= new Cシステムサウンド( @"Sounds\Full combo.ogg",		false, false, true, ESoundGroup.SoundEffect);
+            //this.soundJPOP              = new Cシステムサウンド( @"Sounds\J-POP.ogg",           true, true, true, ESoundGroup.SoundEffect);
+            this.soundSTAGEFAILED音		= new Cシステムサウンド( @"Sounds\Stage failed.ogg",	false, true,  true, ESoundGroup.Voice );
+			this.soundゲーム開始音		= new Cシステムサウンド( @"Sounds\Game start.ogg",		false, false, false, ESoundGroup.Voice );
+			this.soundゲーム終了音		= new Cシステムサウンド( @"Sounds\Game end.ogg",		false, true,  false, ESoundGroup.Voice );
+			this.soundステージクリア音	= new Cシステムサウンド( @"Sounds\Stage clear.ogg",		false, true,  true, ESoundGroup.Voice );
+			this.soundフルコンボ音		= new Cシステムサウンド( @"Sounds\Full combo.ogg",		false, false, true, ESoundGroup.Voice );
 			this.sound曲読込開始音		= new Cシステムサウンド( @"Sounds\Now loading.ogg",		false, true,  true, ESoundGroup.Unknown );
 			this.soundタイトル音		= new Cシステムサウンド( @"Sounds\Title.ogg",			false, true,  false, ESoundGroup.SongPlayback );
 			this.bgm起動画面			= new Cシステムサウンド( @"Sounds\Setup BGM.ogg",		true,  true,  false, ESoundGroup.SongPlayback );
@@ -1812,29 +1795,41 @@ namespace DTXMania
                             {
                                 Game_Training_ScrollTime = int.Parse(strParam);
                             }
-                            else if (strCommand == nameof(Game_Training_ProgressBar_XY))
+                            else if (strCommand == nameof(Game_Training_ProgressBar_X))
                             {
-                                Game_Training_ProgressBar_XY = strParam.Split(',').Select(int.Parse).ToArray();
+                                Game_Training_ProgressBar_X = int.Parse(strParam);
+                            }
+                            else if (strCommand == nameof(Game_Training_ProgressBar_Y))
+                            {
+                                Game_Training_ProgressBar_Y = int.Parse(strParam);
                             }
                             else if (strCommand == nameof(Game_Training_GoGoPoint_Y))
                             {
                                 Game_Training_GoGoPoint_Y = int.Parse(strParam);
                             }
-                            else if (strCommand == nameof(Game_Training_JumpPoint_Y))
+                            else if (strCommand == nameof(Game_Training_MaxMeasureCount_X))
                             {
-                                Game_Training_JumpPoint_Y = int.Parse(strParam);
+                                Game_Training_MaxMeasureCount_X = int.Parse(strParam);
                             }
-                            else if (strCommand == nameof(Game_Training_MaxMeasureCount_XY))
+                            else if (strCommand == nameof(Game_Training_MaxMeasureCount_Y))
                             {
-                                Game_Training_MaxMeasureCount_XY = strParam.Split(',').Select(int.Parse).ToArray();
+                                Game_Training_MaxMeasureCount_Y = int.Parse(strParam);
                             }
-                            else if (strCommand == nameof(Game_Training_CurrentMeasureCount_XY))
+                            else if (strCommand == nameof(Game_Training_CurrentMeasureCount_X))
                             {
-                                Game_Training_CurrentMeasureCount_XY = strParam.Split(',').Select(int.Parse).ToArray();
+                                Game_Training_CurrentMeasureCount_X = int.Parse(strParam);
                             }
-                            else if (strCommand == nameof(Game_Training_SpeedDisplay_XY))
+                            else if (strCommand == nameof(Game_Training_CurrentMeasureCount_Y))
                             {
-                                Game_Training_CurrentMeasureCount_XY = strParam.Split(',').Select(int.Parse).ToArray();
+                                Game_Training_CurrentMeasureCount_Y = int.Parse(strParam);
+                            }
+                            else if (strCommand == nameof(Game_Training_SpeedDisplay_X))
+                            {
+                                Game_Training_SpeedDisplay_X = int.Parse(strParam);
+                            }
+                            else if (strCommand == nameof(Game_Training_SpeedDisplay_Y))
+                            {
+                                Game_Training_SpeedDisplay_Y = int.Parse(strParam);
                             }
                             else if (strCommand == nameof(Game_Training_SmallNumber_Width))
                             {
@@ -2203,12 +2198,15 @@ namespace DTXMania
         #endregion
         #region Training
         public int Game_Training_ScrollTime = 350;
-        public int[] Game_Training_ProgressBar_XY = { 333, 378 };
+        public int Game_Training_ProgressBar_X = 333;
+        public int Game_Training_ProgressBar_Y = 378;
         public int Game_Training_GoGoPoint_Y = 396;
-        public int Game_Training_JumpPoint_Y = 375;
-        public int[] Game_Training_MaxMeasureCount_XY = { 284, 377 };
-        public int[] Game_Training_CurrentMeasureCount_XY = { 254, 370 };
-        public int[] Game_Training_SpeedDisplay_XY = { 110, 370 };
+        public int Game_Training_MaxMeasureCount_X = 284;
+        public int Game_Training_MaxMeasureCount_Y = 377;
+        public int Game_Training_CurrentMeasureCount_X = 254;
+        public int Game_Training_CurrentMeasureCount_Y = 370;
+        public int Game_Training_SpeedDisplay_X = 115;
+        public int Game_Training_SpeedDisplay_Y = 370;
         public int Game_Training_SmallNumber_Width = 17;
         public int Game_Training_BigNumber_Width = 20;
         #endregion

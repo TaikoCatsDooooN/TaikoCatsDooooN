@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 
-namespace DTXMania
+namespace TJAPlayer3
 {
     class PuchiChara : CActivity
     {
@@ -31,13 +31,6 @@ namespace DTXMania
         public void ChangeBPM(double bpm)
         {
             Counter = new CCounter(0, CDTXMania.Skin.Game_PuchiChara[2] - 1, (int)(CDTXMania.Skin.Game_PuchiChara_Timer * bpm / CDTXMania.Skin.Game_PuchiChara[2]), CDTXMania.Timer);
-            SineCounter = new CCounter(1, 360, CDTXMania.Skin.Game_PuchiChara_SineTimer * bpm / 180, CSound管理.rc演奏用タイマ);
-        }
-
-        public void InitializeBPM(double bpm)
-        {
-            Counter = new CCounter(0, CDTXMania.Skin.Game_PuchiChara[2] - 1, (int)(CDTXMania.Skin.Game_PuchiChara_Timer * bpm / CDTXMania.Skin.Game_PuchiChara[2]), CDTXMania.Timer);
-
             SineCounter = new CCounter(1, 360, CDTXMania.Skin.Game_PuchiChara_SineTimer * bpm / 180, CSound管理.rc演奏用タイマ);
         }
 

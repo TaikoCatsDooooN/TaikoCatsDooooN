@@ -581,11 +581,9 @@ namespace DTXMania
             Tokkun_ProgressBar = TxC(GAME + TRAINING + @"ProgressBar_Red.png");
             Tokkun_ProgressBarWhite = TxC(GAME + TRAINING + @"ProgressBar_White.png");
             Tokkun_GoGoPoint = TxC(GAME + TRAINING + @"GoGoPoint.png");
-            Tokkun_JumpPoint = TxC(GAME + TRAINING + @"JumpPoint.png");
             Tokkun_Background_Up = TxC(GAME + TRAINING + @"Background_Up.png");
             Tokkun_BigNumber = TxC(GAME + TRAINING + @"BigNumber.png");
             Tokkun_SmallNumber = TxC(GAME + TRAINING + @"SmallNumber.png");
-            Tokkun_Speed_Measure = TxC(GAME + TRAINING + @"Speed_Measure.png");
             #endregion
             #endregion
 
@@ -1017,11 +1015,9 @@ namespace DTXMania
             CDTXMania.tテクスチャの解放(ref Tokkun_ProgressBar);
             CDTXMania.tテクスチャの解放(ref Tokkun_ProgressBarWhite);
             CDTXMania.tテクスチャの解放(ref Tokkun_GoGoPoint);
-            CDTXMania.tテクスチャの解放(ref Tokkun_JumpPoint);
             CDTXMania.tテクスチャの解放(ref Tokkun_Background_Up);
             CDTXMania.tテクスチャの解放(ref Tokkun_BigNumber);
             CDTXMania.tテクスチャの解放(ref Tokkun_SmallNumber);
-            CDTXMania.tテクスチャの解放(ref Tokkun_Speed_Measure);
             #endregion
 
             #region 6_結果発表
@@ -1269,16 +1265,14 @@ namespace DTXMania
         public CTexture PuchiChara;
         #endregion
         #region Training
-        public CTexture Tokkun_DownBG,
-            Tokkun_BigTaiko,
-            Tokkun_ProgressBar,
-            Tokkun_ProgressBarWhite,
-            Tokkun_GoGoPoint,
-            Tokkun_JumpPoint,
-            Tokkun_Background_Up,
-            Tokkun_BigNumber,
-            Tokkun_SmallNumber,
-            Tokkun_Speed_Measure;
+        public CTexture Tokkun_DownBG;
+        public CTexture Tokkun_BigTaiko;
+        public CTexture Tokkun_ProgressBar;
+        public CTexture Tokkun_ProgressBarWhite;
+        public CTexture Tokkun_GoGoPoint;
+        public CTexture Tokkun_Background_Up;
+        public CTexture Tokkun_BigNumber;
+        public CTexture Tokkun_SmallNumber;
         #endregion
         #endregion
 

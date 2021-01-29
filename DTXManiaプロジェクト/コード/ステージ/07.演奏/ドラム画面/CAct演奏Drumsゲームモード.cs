@@ -409,8 +409,8 @@ namespace DTXMania
 				    if( !this.st叩ききりまショー.ct残り時間.b停止中 || this.st叩ききりまショー.b加算アニメ中 == true )
 				    {
                         this.st叩ききりまショー.ct残り時間.t進行();
-                        if (!CDTXMania.stage演奏ドラム画面.r検索範囲内にチップがあるか調べる((long)(CSound管理.rc演奏用タイマ.n現在時刻 * (((double)CDTXMania.ConfigIni.n演奏速度) / 20.0)), 0, 5000, 0) || this.st叩ききりまショー.b加算アニメ中 == true)
-                        {
+					    if( !CDTXMania.stage演奏ドラム画面.r検索範囲内にチップがあるか調べる( CSound管理.rc演奏用タイマ.n現在時刻ms, 0, 5000, 0 ) || this.st叩ききりまショー.b加算アニメ中 == true )
+					    {
                             this.st叩ききりまショー.bタイマー使用中 = false;
 						    this.st叩ききりまショー.ct残り時間.t停止();
 					    }
@@ -529,11 +529,11 @@ namespace DTXMania
             double n延長する時間 = 0;
 
             //最後に延長した時刻から11秒経過していなければ延長を行わない。
-            if (this.n最後に時間延長した時刻 + 11000 <= (CSound管理.rc演奏用タイマ.n現在時刻 * (((double)CDTXMania.ConfigIni.n演奏速度) / 20.0)))
+            if( this.n最後に時間延長した時刻 + 11000 <= CSound管理.rc演奏用タイマ.n現在時刻ms )
             {
                 //1項目につき5秒
                 //-精度
-                if ( this.st叩ききりまショー.nヒット数_PERFECT != 0 || this.st叩ききりまショー.nヒット数_GREAT != 0 )
+                if( this.st叩ききりまショー.nヒット数_PERFECT != 0 || this.st叩ききりまショー.nヒット数_GREAT != 0 )
                 {
                     double db区間内精度 = ( (double) ( this.st叩ききりまショー.nヒット数_PERFECT + this.st叩ききりまショー.nヒット数_GREAT ) / this.st叩ききりまショー.n区間ノート数 ) * 100.0;
                     for( int i = 0; i < this.n精度ボーナス.Length; i++ )

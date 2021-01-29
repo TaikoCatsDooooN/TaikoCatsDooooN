@@ -202,7 +202,7 @@
     <Compile Include="コード\ステージ\07.演奏\ドラム画面\CAct演奏Drums判定文字列.cs" />
     <Compile Include="コード\ステージ\07.演奏\ドラム画面\CAct演奏Drums風船.cs" />
     <Compile Include="コード\ステージ\07.演奏\ドラム画面\CAct演奏Drums連打.cs" />
-    <Compile Include="コード\ステージ\07.演奏\ドラム画面\CAct演奏Drums特訓モード.cs" />
+    <Compile Include="コード\ステージ\07.演奏\ドラム画面\CAct特訓モード.cs" />
     <Compile Include="コード\ステージ\07.演奏\ドラム画面\CStage演奏ドラム画面.cs" />
     <Compile Include="コード\ステージ\07.演奏\ドラム画面\CAct演奏Drums演奏終了演出.cs" />
     <Compile Include="コード\ステージ\07.演奏\ドラム画面\CAct演奏DrumsDancer.cs" />
@@ -241,6 +241,7 @@
     <Compile Include="コード\全体\CSkin.cs" />
     <Compile Include="コード\全体\C定数.cs" />
     <Compile Include="コード\全体\C文字コンソール.cs" />
+    <Compile Include="コード\全体\Easing.cs" />
     <Compile Include="コード\全体\KeyboardSoundGroupLevelControlHandler.cs" />
     <Compile Include="コード\全体\Program.cs" />
   </ItemGroup>
